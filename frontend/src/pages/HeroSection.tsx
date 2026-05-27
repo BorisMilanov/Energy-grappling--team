@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, Button, Space } from 'antd';
+import { InstagramOutlined } from '@ant-design/icons';
 import herohomeImage from '../assets/herohome.jpg';
 
 const { Title, Paragraph } = Typography;
@@ -23,6 +24,7 @@ const HeroSection: React.FC = () => {
   margin: '0' 
 }}>
       <div style={{ maxWidth: '800px' }}>
+      
         <Title style={{ color: 'white', fontSize: 'clamp(32px, 5vw, 56px)', marginBottom: '24px' }}>
           ПРОМЕНИ ЖИВОТА СИ С <br/> 
           <span style={{ color: '#1890ff' }}>БРАЗИЛСКО ЖИУ-ЖИЦУ</span>
@@ -39,6 +41,27 @@ const HeroSection: React.FC = () => {
            График на тренировките
           </Button>
         </Space>
+
+        {/* Social links */}
+        <div style={{ marginTop: 32, display: 'flex', justifyContent: 'center', gap: 20 }}>
+          <a
+            href="https://www.instagram.com/energygrapplingteam/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex', alignItems: 'center', gap: 8,
+              color: 'white', fontSize: 16, textDecoration: 'none',
+              background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)',
+              padding: '8px 20px', borderRadius: 24,
+              transition: 'opacity 0.2s',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
+            onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+          >
+            <InstagramOutlined style={{ fontSize: 20 }} />
+            @energygrapplingteam
+          </a>
+        </div>
       </div>
     </div>
   );

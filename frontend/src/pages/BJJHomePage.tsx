@@ -8,7 +8,7 @@ const { useBreakpoint } = Grid;
 import type { ColumnsType } from 'antd/es/table';
 import { Users, ShieldCheck, Trophy, MapPin, Phone, CheckCircle2, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router';
-import { MenuOutlined, CloseOutlined, UserOutlined, LogoutOutlined } from '@ant-design/icons';
+import { MenuOutlined, CloseOutlined, UserOutlined, LogoutOutlined, InstagramOutlined, FacebookFilled } from '@ant-design/icons';
 import { authStorage } from '../services/authApi';
 import herohomeImage from '../assets/herohome.jpg';
 import { scheduleData, type ScheduleItem } from '../data/scheduleData';
@@ -102,12 +102,12 @@ const BJJHomePage: React.FC = () => {
           padding: '0 50px', background: '#001529', height: 64,
         }}>
           <div
-            style={{ color: 'white', fontWeight: 'bold', fontSize: 20, cursor: 'pointer' }}
+            style={{ color: 'white', fontWeight: 'bold', fontSize: 20, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8 }}
             onClick={() => scrollTo('hero')}
           >
-            OSSU <span style={{ color: '#1890ff' }}>BJJ</span>
+           Energy Grappling Team
           </div>
-
+          {/* IN deployment */}
           {/* Desktop nav */}
           <div className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
             <Menu
@@ -202,7 +202,7 @@ const BJJHomePage: React.FC = () => {
                 size="large"
                 style={isMobile ? { display: 'flex', alignItems: 'center', width: '100%' } : undefined}
               >
-                <Button type="primary" size="large" style={{ height: 50, padding: '0 40px', ...(isMobile && { width: 240 }) }}>
+                <Button onClick={() => navigate('/register')} type="primary" size="large" style={{ height: 50, padding: '0 40px', ...(isMobile && { width: 240 }) }}>
                   ЗАПИШИ СЕ СЕГА
                 </Button>
                 <Button ghost size="large" style={{ height: 50, ...(isMobile && { width: 240 }) }} onClick={() => scrollTo('schedule')}>
@@ -297,7 +297,7 @@ const BJJHomePage: React.FC = () => {
                 Не знаеш откъде да започнеш?
               </Title>
               <Paragraph style={{ color: 'rgba(255,255,255,0.7)', fontSize: 18, marginBottom: 32 }}>
-                Ела на място, разгледай залата и направи първата си тренировка безплатно.
+                Ела на място, разгледай залата.
               </Paragraph>
               <Button type="primary" size="middle" icon={<CheckCircle2 size={20} />} style={{ height: 54, display: 'flex', alignItems: 'center', margin: '0 auto' }}>
                 ЗАПИШИ СЕ СЕГА
@@ -307,33 +307,77 @@ const BJJHomePage: React.FC = () => {
         </Content>
 
         {/* ── FOOTER ── */}
-        <Footer style={{ background: '#f5f5f5', padding: '60px 10%' }}>
-          <Row gutter={[40, 40]}>
-            <Col xs={24} md={10}>
-              <Title level={4}>OSSU BJJ BULGARIA</Title>
-              <Paragraph type="secondary">
+        <Footer style={{ background: '#001529', padding: '48px 8% 24px' }}>
+          <Row gutter={[32, 40]}>
+
+            {/* Brand */}
+            <Col xs={24} sm={24} md={10}>
+              <Title level={5} style={{ color: 'white', marginBottom: 16 }}>Energy Grappling Team</Title>
+              <Paragraph style={{ color: 'rgba(255,255,255,0.55)', marginBottom: 0 }}>
                 Ние вярваме, че Бразилското Жиу-Жицу е за всеки – независимо от възраст,
                 пол или атлетични възможности. Присъедини се към нас и открий своята сила.
               </Paragraph>
             </Col>
-            <Col xs={24} md={7}>
-              <Title level={4}>Локация</Title>
-              <Space direction="vertical">
-                <Text><MapPin size={16} style={{ marginRight: 8 }} />София, бул. "Витоша" 100</Text>
-                <Text><Phone size={16} style={{ marginRight: 8 }} />+359 88 000 0000</Text>
+
+            {/* Location */}
+            <Col xs={24} sm={12} md={7}>
+              <Title level={5} style={{ color: 'white', marginBottom: 16 }}>Локация</Title>
+              <Space direction="vertical" size={10}>
+                <Text style={{ color: 'rgba(255,255,255,0.65)', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <MapPin size={15} />&nbsp;София, бул. "Витоша" 100
+                </Text>
+                <Text style={{ color: 'rgba(255,255,255,0.65)', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <Phone size={15} />&nbsp;+359 88 000 0000
+                </Text>
               </Space>
             </Col>
-            <Col xs={24} md={7}>
-              <Title level={4}>Социални мрежи</Title>
-              <Space direction="vertical">
-                <Text><a href="energygrapplingteam" target="_blank" rel="noopener noreferrer">Instagram</a></Text>
-                <Text><a href="https://www.facebook.com/profile.php?id=100089051213503" target="_blank" rel="noopener noreferrer">Facebook</a></Text>
-              </Space>
+
+            {/* Social */}
+            <Col xs={24} sm={12} md={7}>
+              <Title level={5} style={{ color: 'white', marginBottom: 16 }}>Социални мрежи</Title>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                <a
+                  href="https://www.instagram.com/energygrapplingteam/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'flex', alignItems: 'center', gap: 10,
+                    color: 'white', fontSize: 12, textDecoration: 'none',
+                    background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)',
+                    padding: '9px 10px', borderRadius: 24,
+                    transition: 'opacity 0.2s', width: 'fit-content',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
+                  onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                >
+                  <InstagramOutlined style={{ fontSize: 16 }} />
+                  @energygrapplingteam
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100089051213503"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'flex', alignItems: 'center', gap: 10,
+                    color: 'white', fontSize: 12, textDecoration: 'none',
+                    background: '#1877F2',
+                    padding: '9px 10px', borderRadius: 24,
+                    transition: 'opacity 0.2s', width: 'fit-content',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
+                  onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                >
+                  <FacebookFilled style={{ fontSize: 16 }} />
+                  Energy Grappling Team
+                </a>
+              </div>
             </Col>
+
           </Row>
-          <Divider />
-          <div style={{ textAlign: 'center', color: '#8c8c8c' }}>
-            © {new Date().getFullYear()} OSSU BJJ Academy. Designed with Honor.
+
+          <Divider style={{ borderColor: 'rgba(255,255,255,0.12)', margin: '32px 0 20px' }} />
+          <div style={{ textAlign: 'center', color: 'rgba(255,255,255,0.35)', fontSize: 13 }}>
+            © {new Date().getFullYear()} Energy Grappling Team. Designed with Boris Milanov.
           </div>
         </Footer>
       </Layout>
