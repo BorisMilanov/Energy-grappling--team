@@ -80,9 +80,9 @@ const BJJHomePage: React.FC = () => {
 
   const navItems = [
 
-    ...(user ? [{ key: 'calendar-link', label: 'Календар' }, { key: 'members-link', label: 'Членове' }] : [ { key: 'hero', label: 'Начало' },
+    ...(user ? [ { key: 'calendar-link', label: 'Календар' },{ key: 'members-link', label: 'Членове' }] : [ { key: 'hero', label: 'Начало' },
     { key: 'schedule', label: 'График' },
-    { key: 'contact', label: 'Контакти' },]),
+    { key: 'contact', label: 'Контакти' },{ key: 'calendar-link', label: 'Календар' },]),
     ...(user?.role === 'admin' ? [
 
       { key: 'admin-members', label: 'Членове (админ)' },
@@ -114,6 +114,7 @@ const BJJHomePage: React.FC = () => {
               theme="dark" mode="horizontal"
               defaultSelectedKeys={['hero']}
               items={navItems}
+              disabledOverflow
               onClick={(e) => {
                   if (e.key === 'calendar-link') navigate('/calendar');
                   else if (e.key === 'members-link') navigate('/members');
@@ -324,7 +325,7 @@ const BJJHomePage: React.FC = () => {
               <Title level={5} style={{ color: 'white', marginBottom: 16 }}>Локация</Title>
               <Space direction="vertical" size={10}>
                 <Text style={{ color: 'rgba(255,255,255,0.65)', display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <MapPin size={15} />&nbsp;София, бул. "Витоша" 100
+                  <MapPin size={15} />&nbsp;ул. търговска 42, Lovech, Bulgaria, 5500
                 </Text>
                 <Text style={{ color: 'rgba(255,255,255,0.65)', display: 'flex', alignItems: 'center', gap: 8 }}>
                   <Phone size={15} />&nbsp;+359 88 000 0000

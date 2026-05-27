@@ -26,14 +26,7 @@ function App(): React.JSX.Element {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         
-        <Route
-          path="/calendar"
-          element={
-            <ProtectedRoute>
-              <CalendarPage />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/calendar" element={<CalendarPage />} />
         <Route
           path="/members"
           element={
