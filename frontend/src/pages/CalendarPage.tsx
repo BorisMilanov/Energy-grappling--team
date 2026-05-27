@@ -198,7 +198,7 @@ const CalendarPage: React.FC = () => {
             style={{ color: 'white', fontWeight: 'bold', fontSize: isMobile ? 16 : 20, cursor: 'pointer', flexShrink: 0 }}
             onClick={() => navigate('/')}
           >
-            OSSU <span style={{ color: '#1890ff' }}>BJJ</span>
+            Energy Grappling Team
           </div>
 
           {!isMobile && (

@@ -149,9 +149,8 @@ const AdminMembersPage: React.FC = () => {
         }}>
           <div
             style={{ color: 'white', fontWeight: 'bold', fontSize: 20, cursor: 'pointer' }}
-            onClick={() => navigate('/')}
           >
-            OSSU <span style={{ color: '#1890ff' }}>BJJ</span>
+            Energy Grappling Team
           </div>
 
           <Menu

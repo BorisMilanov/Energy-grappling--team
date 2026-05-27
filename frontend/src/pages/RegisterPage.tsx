@@ -48,7 +48,7 @@ const RegisterPage: React.FC = () => {
           }}>
             <div style={{ textAlign: 'center', marginBottom: 32 }}>
               <Title level={3} style={{ margin: 0 }}>
-                OSSU <span style={{ color: '#1890ff' }}>BJJ</span>
+                Energy Grappling Team
               </Title>
               <Text type="secondary" style={{ fontSize: 15 }}>Създай профил</Text>
             </div>
