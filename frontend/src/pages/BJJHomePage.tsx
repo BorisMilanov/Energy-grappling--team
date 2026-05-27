@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   Layout, Menu, Button, Row, Col, Typography, Card, Table,
   Space, ConfigProvider, Tag, Dropdown, Grid,
@@ -12,40 +12,14 @@ import { MenuOutlined, CloseOutlined, UserOutlined, LogoutOutlined } from '@ant-
 import { authStorage } from '../services/authApi';
 import herohomeImage from '../assets/herohome.jpg';
 import { scheduleData, type ScheduleItem } from '../data/scheduleData';
+import { useScrollReveal, revealStyle } from '../hooks/useScrollReveal';
+import TrainerSection from './TrainerSection';
 import Footer from './Footer';
 
 const { Header, Content } = Layout;
 const { Title, Paragraph, Text } = Typography;
 
 
-function useScrollReveal(threshold = 0.15) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold },
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  return { ref, isVisible };
-}
-
-function revealStyle(isVisible: boolean, delay = 0): React.CSSProperties {
-  return {
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? 'translateY(0)' : 'translateY(40px)',
-    transition: `opacity 0.65s ease ${delay}ms, transform 0.65s ease ${delay}ms`,
-  };
-}
 
 const BJJHomePage: React.FC = () => {
   const navigate = useNavigate();
@@ -82,6 +56,7 @@ const BJJHomePage: React.FC = () => {
   const publicNavItems = [
     { key: 'hero', label: 'Начало' },
     { key: 'schedule', label: 'График' },
+    { key: 'trainer', label: 'Треньор' },
     { key: 'contact', label: 'Контакти' },
     { key: 'calendar-link', label: 'Календар' },
   ];
@@ -296,6 +271,9 @@ const BJJHomePage: React.FC = () => {
               }}
             />
           </section>
+
+          {/* ── TRAINER ── */}
+          <TrainerSection />
 
           {/* ── CTA ── */}
           <section
