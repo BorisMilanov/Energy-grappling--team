@@ -53,7 +53,7 @@ const CustomHeader: React.FC<CustomHeaderProps> = ({ scrollToSection }) => {
       >
         {/* Brand Logo */}
         <div style={{ color: 'white', fontWeight: 'bold', fontSize: '20px' }}>
-          OSSU <span style={{ color: '#1890ff' }}>BJJ</span>
+       <img src="/public/logo.png" alt="Logo" />
         </div>
 
         {/* --- DESKTOP MENU --- */}

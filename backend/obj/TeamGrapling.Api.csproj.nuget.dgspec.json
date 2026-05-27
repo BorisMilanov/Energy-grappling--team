@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\work\\TeamGrapling\\TeamGrapling\\backend\\TeamGrapling.Api.csproj": {}
+    "E:\\work\\BJJwork\\Energy-grappling-team\\backend\\TeamGrapling.Api.csproj": {}
   },
   "projects": {
-    "E:\\work\\TeamGrapling\\TeamGrapling\\backend\\TeamGrapling.Api.csproj": {
+    "E:\\work\\BJJwork\\Energy-grappling-team\\backend\\TeamGrapling.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\work\\TeamGrapling\\TeamGrapling\\backend\\TeamGrapling.Api.csproj",
+        "projectUniqueName": "E:\\work\\BJJwork\\Energy-grappling-team\\backend\\TeamGrapling.Api.csproj",
         "projectName": "TeamGrapling.Api",
-        "projectPath": "E:\\work\\TeamGrapling\\TeamGrapling\\backend\\TeamGrapling.Api.csproj",
+        "projectPath": "E:\\work\\BJJwork\\Energy-grappling-team\\backend\\TeamGrapling.Api.csproj",
         "packagesPath": "C:\\Users\\boris\\.nuget\\packages\\",
-        "outputPath": "E:\\work\\TeamGrapling\\TeamGrapling\\backend\\obj\\",
+        "outputPath": "E:\\work\\BJJwork\\Energy-grappling-team\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\boris\\AppData\\Roaming\\NuGet\\NuGet.Config"

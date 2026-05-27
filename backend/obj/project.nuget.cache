@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xi3y2M/FhUo=",
+  "dgSpecHash": "bC/unj47FNw=",
   "success": true,
-  "projectFilePath": "E:\\work\\TeamGrapling\\TeamGrapling\\backend\\TeamGrapling.Api.csproj",
+  "projectFilePath": "E:\\work\\BJJwork\\Energy-grappling-team\\backend\\TeamGrapling.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\boris\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\boris\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -170,20 +170,22 @@ const AdminCalendarPage: React.FC = () => {
           </div>
 
           <Menu
-            theme="dark"
-            mode="horizontal"
-            selectedKeys={['/admin/calendar']}
-     items={[
-              { key: '/calendar', label: 'Календар' },
-              { key: '/members', label: 'Членове' },
-              ...(isAdmin
-                ? [
-                    { key: '/admin/calendar', label: 'Календар (админ)' },
-                    { key: '/admin/members', label: 'Членове (админ)' },
-                  ]
-                : []),
-            ]}
-          />
+               theme="dark"
+               mode="horizontal"
+               selectedKeys={['/admin/calendar']}
+               items={[
+                 { key: '/calendar', label: 'Календар' },
+                 { key: '/members', label: 'Членове' },
+                 ...(isAdmin
+                   ? [
+                       { key: '/admin/calendar', label: 'Календар (админ)' },
+                       { key: '/admin/members', label: 'Членове (админ)' },
+                     ]
+                   : []),
+               ]}
+               onClick={(e) => navigate(e.key)}
+               style={{ flex: 1, minWidth: 0, justifyContent: 'flex-end', borderBottom: 'none', marginRight: 16 }}
+             />
 
           {user && (
             <Dropdown
