@@ -44,7 +44,7 @@ const LoginPage: React.FC = () => {
           }}>
             <div style={{ textAlign: 'center', marginBottom: 32 }}>
               <Title level={3} style={{ margin: 0 }}>
-                Energy Grappling Team
+                Energy Grappling
               </Title>
               <Text type="secondary" style={{ fontSize: 15 }}>Влез в профила си</Text>
             </div>

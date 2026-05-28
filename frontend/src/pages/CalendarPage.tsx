@@ -198,7 +198,7 @@ const CalendarPage: React.FC = () => {
             style={{ color: 'white', fontWeight: 'bold', fontSize: isMobile ? 16 : 20, cursor: 'pointer', flexShrink: 0 }}
             onClick={() => navigate('/')}
           >
-            Energy Grappling Team
+            Energy Grappling
           </div>
 
           {!isMobile && (

@@ -150,7 +150,7 @@ const AdminMembersPage: React.FC = () => {
           <div
             style={{ color: 'white', fontWeight: 'bold', fontSize: 20, cursor: 'pointer' }}
           >
-            Energy Grappling Team
+            Energy Grappling
           </div>
 
           <Menu

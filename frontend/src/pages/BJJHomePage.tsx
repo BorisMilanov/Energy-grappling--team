@@ -93,7 +93,7 @@ const BJJHomePage: React.FC = () => {
             style={{ color: 'white', fontWeight: 'bold', fontSize: 20, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8 }}
             onClick={() => scrollTo('hero')}
           >
-           Energy Grappling Team
+           Energy Grappling
           </div>
           {/* Desktop nav */}
           <div className="desktop-nav" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', flex: 1 }}>

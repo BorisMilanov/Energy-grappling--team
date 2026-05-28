@@ -53,7 +53,7 @@ const TrainerSection: React.FC = () => {
             >
               <Title level={3} style={{ marginBottom: 4 }}>Димитър Николов</Title>
               <Paragraph type="secondary" style={{ fontSize: 15, marginBottom: 20 }}>
-                Главен треньор · Energy Grappling Team
+                Главен треньор · Energy Grappling
               </Paragraph>
 
               {/* Stats */}
@@ -82,7 +82,7 @@ const TrainerSection: React.FC = () => {
 
               {/* Bio */}
               <Paragraph style={{ fontSize: 15, color: '#444', lineHeight: 1.8, marginBottom: 0 }}>
-                Треньорът на Energy Grappling Team е посветен на развитието на всеки спортист —
+                Треньорът на Energy Grappling е посветен на развитието на всеки спортист —
                 от начинаещи до напреднали. С дългогодишен опит в бразилското жиу-жицу и
                 грапплинга, той изгражда не само умения на татамито, но и характер,
                 дисциплина и увереност извън него.

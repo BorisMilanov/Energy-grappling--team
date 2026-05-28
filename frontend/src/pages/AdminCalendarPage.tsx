@@ -166,7 +166,7 @@ const AdminCalendarPage: React.FC = () => {
             style={{ color: 'white', fontWeight: 'bold', fontSize: 20, cursor: 'pointer' }}
             
           >
-            Energy Grappling Team
+            Energy Grappling
           </div>
 
           <Menu

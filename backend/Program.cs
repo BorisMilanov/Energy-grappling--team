@@ -74,6 +74,19 @@ using (var scope = app.Services.CreateScope())
         });
         db.SaveChanges();
     }
+
+    if (!db.Users.Any(u => u.Email == "adm@gmail.com"))
+    {
+        db.Users.Add(new TeamGrapling.Api.Models.User
+        {
+            Email = "adm@gmail.com",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("123try"),
+            FirstName = "Adm",
+            LastName = "Admin",
+            Role = "admin",
+        });
+        db.SaveChanges();
+    }
 }
 
 app.UseCors("FrontendPolicy");

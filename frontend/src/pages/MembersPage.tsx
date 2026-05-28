@@ -106,7 +106,7 @@ const MembersPage: React.FC = () => {
             style={{ color: 'white', fontWeight: 'bold', fontSize: 20, cursor: 'pointer' }}
             onClick={() => navigate('/')}
           >
-            Energy Grappling Team
+            Energy Grappling
           </div>
 
           <Menu

@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
 
         {/* Brand */}
         <Col xs={24} sm={24} md={10}>
-          <Title level={5} style={{ color: 'white', marginBottom: 16 }}>Energy Grappling Team</Title>
+          <Title level={5} style={{ color: 'white', marginBottom: 16 }}>Energy Grappling</Title>
           <Paragraph style={{ color: 'rgba(255,255,255,0.55)', marginBottom: 0 }}>
             Ние вярваме, че Бразилското Жиу-Жицу е за всеки – независимо от възраст,
             пол или атлетични възможности. Присъедини се към нас и открий своята сила.
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
               onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
             >
               <FacebookFilled style={{ fontSize: 16 }} />
-              Energy Grappling Team
+              Energy Grappling
             </a>
           </div>
         </Col>
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
 
       <Divider style={{ borderColor: 'rgba(255,255,255,0.12)', margin: '32px 0 20px' }} />
       <div style={{ textAlign: 'center', color: 'rgba(255,255,255,0.35)', fontSize: 13 }}>
-        © {new Date().getFullYear()} Energy Grappling Team. Designed with Boris Milanov.
+        © {new Date().getFullYear()} Energy Grappling. Designed with Boris Milanov.
       </div>
     </AntFooter>
   );
