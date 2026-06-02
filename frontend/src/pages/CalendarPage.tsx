@@ -208,7 +208,7 @@ const CalendarPage: React.FC = () => {
               selectedKeys={['/calendar']}
               items={[
                 { key: '/calendar', label: 'Календар' },
-                { key: '/members', label: 'Членове' },
+                // { key: '/members', label: 'Членове' },
                 ...(isAdmin
                   ? [
                       { key: '/admin/calendar', label: 'Календар (админ)' },

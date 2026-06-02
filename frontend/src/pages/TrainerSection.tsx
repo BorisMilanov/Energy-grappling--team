@@ -27,7 +27,7 @@ const TrainerSection: React.FC = () => {
             <div style={{ position: 'relative', display: 'inline-block' }}>
               <Avatar
                 size={340}
-                src="/public/trener.jpg"
+                src="/public/trainer.jpg"
               >
                 EG
               </Avatar>
